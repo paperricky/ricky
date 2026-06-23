@@ -11,3 +11,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs
 # Coming Soon
 
 ## 🟡 Build A Ring Farm
+
+## 🟡 Cross Rivers for Brainrots
+
+## 🟡 Slime Incremental: Revived
