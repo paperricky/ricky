@@ -10,11 +10,12 @@ Auto Collect Eggs, Auto Deposit Eggs, Auto Collect Cash, Auto Merge Chickens, Au
 ## 🟢 Sail For Brainrots
 Auto Farm, Auto Claim Brainrots and Redeem Codes
 
+## 🟢 Slime Incremental: Revived
+Auto Farm Slimes (With Customizable Speed), Auto Buy Slime Value, Auto Buy Slime Cooldown, Auto Buy Slime Max Cap, Auto Buy Slime Tier, Auto Buy EXP Multiplier
+
 ## 🟢 Cross Rivers for Brainrots
 Auto Farm
 
 # Coming Soon
 
 ## 🟡 Build A Ring Farm
-
-## 🟡 Slime Incremental: Revived
