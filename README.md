@@ -2,12 +2,13 @@
 # made by ultimate tuff paper
 
 ---
-### @paperyeah on dc
+### To suggest games, report bugs etc join the discord https://discord.gg/VahJcnvGbg
 ## Lua:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
 ```
 ### Just a thing im working on, gonna make stuff open source as of right now 05-07-26 [DD/MM/YY]
+
 
 ![image alt](https://github.com/paperricky/ricky/blob/24061e02b6c7e8644acbeb6fa94c498da8efc5b4/screenshot%20(2).png)
 
