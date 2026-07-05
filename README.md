@@ -15,49 +15,43 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs
 ---
 
 ## 🟢 Chicken Farm
-- Auto Collect Eggs  
-- Auto Deposit Eggs  
-- Auto Collect Cash  
-- Auto Merge Chickens  
-- Auto Buy Chickens  
+- Auto collect eggs  
+- Auto deposit eggs  
+- Auto collect cash  
+- Auto merge chickens  
+- Auto buy chickens  
 
 ---
 
 ## 🟢 Sail For Brainrots
-- Auto Farm  
-- Auto Claim Brainrots  
-- Redeem Codes  
+- Auto farm  
+- Auto claim Brainrots  
+- Redeem codes  
 
 ---
 
 ## 🟢 Slime Incremental: Revived
-
-### ⚙️ Auto Farming
-- Auto Farm Slimes (Customizable Speed)
-
-### ⬆️ Upgrades
-- Auto Buy Slime Value  
-- Auto Buy Slime Cooldown  
-- Auto Buy Slime Max Cap  
-- Auto Buy Slime Tier  
-- Auto Buy EXP Multiplier  
+- Auto farm slimes (customizable speed)  
+- Auto buy slime value  
+- Auto buy slime cooldown  
+- Auto buy slime max cap  
+- Auto buy slime tier  
+- Auto buy EXP multiplier  
 
 ---
 
 ## 🟢 Cross Rivers for Brainrots
-- Auto Farm  
+- Auto farm  
 
 ---
 
 ## 🟢 Obby As a Brainrot
-- Auto Farm Disco Dragon Cannelloni  
-- Auto Farm Disco Meowl  
-- Auto Collect Brainrots  
-- Auto Rebirth  
-- Remove Collect VFX  
-- Remove Notifications  
-
----
+- Auto farm Disco Dragon Cannelloni  
+- Auto farm Disco Meowl  
+- Auto collect Brainrots  
+- Auto rebirth  
+- Remove collect VFX  
+- Remove rebirth notifications  
 
 ## 🟡 Coming Soon
 - Build A Ring Farm  
