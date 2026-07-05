@@ -6,10 +6,11 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
 ```
 ### Just a thing im working on, Gonna make stuff open source as of right now 05-07-26 [DD/MM/YY]
+#### Supported Games Below
 
 ![image alt](https://github.com/paperricky/ricky/blob/24061e02b6c7e8644acbeb6fa94c498da8efc5b4/screenshot%20(2).png)
 
-# Supported Games
+# 🟢 Supported Games
 
 
 ## 🟢 Chicken Farm
@@ -27,6 +28,6 @@ Auto Farm
 ## 🟢 Obby As a Brainrot
 Auto Farm Disco Dragon Cannelloni, Auto Farm Disco Meowl, Auto Collect Brainrots, Auto Rebirth, Remove Collect Brainrots VFX, Remove Rebirth Notifications
 
-# Coming Soon
+# 🟡 Coming Soon
 
-## 🟡 Build A Ring Farm
+## 🟡 more brainrot games
