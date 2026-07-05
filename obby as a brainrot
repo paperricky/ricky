@@ -1,1 +1,178 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
+task.wait(0.5)
+local gui = game.CoreGui:WaitForChild("PaperGui")
+local mainframe = gui["holds everything"].mainframe
+local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
+local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
+for i = 1, 10 do scrollFrame:FindFirstChild("textbox"..i, true):Destroy() end
 
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+local hrp = char:WaitForChild("HumanoidRootPart")
+
+player.CharacterAdded:Connect(function(newchar)
+	char = newchar
+    hrp = newchar:WaitForChild("HumanoidRootPart")
+end)
+
+
+button1.TextSize = 17.5
+button1.Text = "Auto Farm Disco Dragon Cannelloni: OFF"
+button3.Text = "Auto Collect Brainrots: OFF"
+button4.Text = "Remove Collect Brainrots VFX"
+button2.Text = "Auto Farm Disco Meowl: OFF"
+button5.Text = "Auto Rebirth: OFF"
+button6.Text = "Remove Rebirth Notifications"
+button7.Parent:Destroy()
+button8.Parent:Destroy()
+button9.Parent:Destroy()
+button10.Parent:Destroy()
+
+
+
+
+
+local toggle = false
+button1.MouseButton1Click:Connect(function()
+	toggle = not toggle
+	button1.Text = toggle and "Auto Farm Disco Dragon Cannelloni: ON" or "Auto Farm Disco Dragon Cannelloni: OFF"
+	while toggle do
+		if not toggle then break end
+		task.wait(0.2)
+		char:MoveTo(Vector3.new(4, 19, -495))
+        task.wait(0.2)
+        local ricky = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowStarted
+        ricky:FireServer()
+        task.wait(0.1)
+        local r = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowBatHit
+        r:FireServer(
+            nil,
+            false
+        )
+        task.wait(0.1)
+        local r1 = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowBatTimingVfxCleanup
+        r1:FireServer()
+        task.wait(0.1)
+        local Event = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.LuckyBlockLanded
+        Event:FireServer(
+            {
+                LandingPosition = Vector3.new(-2, -98, 4513),
+                ItemName = "Dragon Cannelloni",
+                Rarity = "OG",
+                BlockName = "Lucky Block",
+                LandingRarity = "OG",
+                Mutation = "Disco",
+                Power = 8.1521579365352
+            }
+        )
+
+    if not toggle then
+        task.wait()
+        char:MoveTo(Vector3.new(8, 19, -532))
+    end 
+
+	end
+end)
+
+local toggle2 = false
+button2.MouseButton1Click:Connect(function()
+    toggle2 = not toggle2
+    button2.Text = toggle2 and "Auto Farm Disco Meowl: ON" or "Auto Farm Disco Meowl: OFF"
+    while toggle2 do
+        if not toggle2 then break end
+		task.wait(0.2)
+		char:MoveTo(Vector3.new(4, 19, -495))
+        task.wait(0.2)
+        local ricky = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowStarted
+        ricky:FireServer()
+        task.wait(0.1)
+        local r = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowBatHit
+        r:FireServer(
+            nil,
+            false
+        )
+        task.wait(0.1)
+        local r1 = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.ThrowBatTimingVfxCleanup
+        r1:FireServer()
+        task.wait(0.1)
+        local Event = game:GetService("ReplicatedStorage").ThrowLuckyBlockRemotes.LuckyBlockLanded
+        Event:FireServer(
+            {
+                LandingPosition = Vector3.new(-2, -98, 4513),
+                ItemName = "Meowl",
+                Rarity = "OG",
+                BlockName = "Lucky Block",
+                LandingRarity = "OG",
+                Mutation = "Disco",
+                Power = 8.1521579365352
+            }
+        )
+
+    if not toggle2 then
+        task.wait()
+        char:MoveTo(Vector3.new(8, 19, -532))
+    end 
+
+    end
+end)
+
+
+    local toggle1 = false
+
+    local playerplot = workspace["Plot_" .. player.Name]
+
+    button3.MouseButton1Click:Connect(function()
+        toggle1 = not toggle1
+        button3.Text = toggle1 and "Auto Collect Brainrots: ON" or "Auto Collect Brainrots: OFF"
+        while toggle1 do
+            task.wait()
+                for _, v in pairs(playerplot.Floor1.Slots:GetChildren()) do
+                if not toggle1 then break end
+                firetouchinterest(hrp, v.CollectTouch, true)
+                task.wait()
+                firetouchinterest(hrp, v.CollectTouch, false)
+                end
+                for _, c in ipairs(playerplot.Floor2.Slots:GetChildren()) do
+                    if not toggle1 then break end
+                    firetouchinterest(hrp, c.CollectTouch, true)
+                    task.wait()
+                    firetouchinterest(hrp, c.CollectTouch, false)
+                end 
+
+                for _, x in ipairs(playerplot.Floor3.Slots:GetChildren()) do
+                    if not toggle1 then break end
+                    firetouchinterest(hrp, x.CollectTouch, true)
+                    task.wait()
+                    firetouchinterest(hrp, x.CollectTouch, false)
+                end
+            end
+    end)
+
+
+    button4.MouseButton1Click:Connect(function()
+        local popup = game:GetService("ReplicatedStorage").Events.CashPopup
+        local popup2 = game:GetService("Players").LocalPlayer.PlayerGui.GUI.CashPopups
+        local popup3 = game:GetService("StarterGui").GUI.CashPopups
+
+        popup:Destroy()
+        popup2:Destroy()
+        popup3:Destroy()
+        
+    end)
+
+    local toggle3 = false
+    button5.MouseButton1Click:Connect(function()
+        toggle3 = not toggle3
+        button5.Text = toggle3 and "Auto Rebirth: ON" or "Auto Rebirth: OFF"
+            while toggle3 do
+            task.wait()
+            local Event = game:GetService("ReplicatedStorage").Events.RequestRebirth
+            Event:FireServer()
+        end    
+        
+    end)
+
+    button6.MouseButton1Click:Connect(function()
+        local noti = game:GetService("ReplicatedStorage").Events.ShowNotification
+        noti:Destroy()
+    end)
