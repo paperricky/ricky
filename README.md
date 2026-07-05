@@ -20,6 +20,9 @@ Auto Farm Slimes (With Customizable Speed), Auto Buy Slime Value, Auto Buy Slime
 ## 🟢 Cross Rivers for Brainrots
 Auto Farm
 
+## 🟢 Obby As a Brainrot
+Auto Farm Disco Dragon Cannelloni, Auto Farm Disco Meowl, Auto Collect Brainrots, Auto Rebirth, Remove Collect Brainrots VFX, Remove Rebirth Notifications
+
 # Coming Soon
 
 ## 🟡 Build A Ring Farm
