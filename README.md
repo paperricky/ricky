@@ -13,7 +13,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs
 
 #### Supported Games Below
 
-# 🟢 Supported Games
+# ⚙️ Supported Games
 
 ---
 
