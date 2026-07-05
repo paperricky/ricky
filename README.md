@@ -58,4 +58,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs
 
 ## 🟡 Coming Soon
 
-- Build A Ring Farm  
+- Brainrot games idfk 
