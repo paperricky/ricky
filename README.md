@@ -52,7 +52,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs
 - Auto Collect Brainrots  
 - Auto Rebirth  
 - Remove Collect Brainrots VFX  
-- Remove Rebirth Notifications  
+- Remove Rebirth Notifications
+
+----
 
 ## 🟡 Coming Soon
 
