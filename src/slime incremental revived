@@ -4,6 +4,8 @@ local gui = game.CoreGui:WaitForChild("PaperGui")
 local mainframe = gui["holds everything"].mainframe
 local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
 local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
+-- ai compressed so it wouldnt be 300 lines long
+
 for i = 2, 10 do scrollFrame:FindFirstChild("textbox"..i, true):Destroy() end
 local textbox1 = scrollFrame:FindFirstChild("textbox1", true)
 
