@@ -1,0 +1,100 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
+task.wait(1)
+local gui = game.CoreGui:WaitForChild("PaperGui")
+local mainframe = gui["holds everything"].mainframe
+local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
+local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
+for i = 2, 10 do scrollFrame:FindFirstChild("textbox"..i, true):Destroy() end
+local textbox1 = scrollFrame:FindFirstChild("textbox1", true)
+
+button7.Parent:Destroy()
+button8.Parent:Destroy()
+button9.Parent:Destroy()
+button10.Parent:Destroy()
+
+button1.Text = "Auto Farm Slimes: OFF"
+button2.Text = "Auto Buy Slime Value: OFF"
+button3.Text = "Auto Buy Slime Cooldown: OFF"
+button4.Text = "Auto Buy Slime Max Cap: OFF"
+button5.Text = "Auto Buy Slime Tier: OFF"
+button6.Text = "Auto Buy EXP Multiplier: OFF"
+textbox1.Text = "0.04"
+textbox1.PlaceholderText = "Default Speed: 0.04"
+
+local slimes = workspace.Runtime.Slimes
+
+local slimevalue = game:GetService("ReplicatedStorage").Remotes.PurchaseUpgrade
+local spawnrate = game:GetService("ReplicatedStorage").Remotes.PurchaseUpgrade
+local maxcap = game:GetService("ReplicatedStorage").Remotes.PurchaseUpgrade
+local slimetier = game:GetService("ReplicatedStorage").Remotes.PurchaseUpgrade
+local expmulti = game:GetService("ReplicatedStorage").Remotes.PurchaseUpgrade
+
+local toggle = false
+button1.MouseButton1Click:Connect(function()
+	toggle = not toggle
+	button1.Text = toggle and "Auto Farm Slimes: ON" or "Auto Farm Slimes: OFF"
+	while toggle do
+		
+		local player = game:GetService("Players").LocalPlayer
+		local char = player.Character
+
+		for _, v in ipairs(slimes:GetChildren()) do
+		if not toggle then break end
+		task.wait(tonumber(textbox1.Text))
+		char:MoveTo(v:GetPivot().Position)
+		workspace.Gravity = 1
+		end
+	end
+	workspace.Gravity = 192.6
+end)
+
+
+local toggle2 = false
+button2.MouseButton1Click:Connect(function()
+	toggle2 = not toggle2
+	button2.Text = toggle2 and "Auto Buy Slime Value: ON" or "Auto Buy Slime Value: OFF"
+	while toggle2 do
+		task.wait(0.1)
+		spawnrate:FireServer("spawnRate", "One", nil)
+	end
+end)
+
+local toggle3 = false
+button3.MouseButton1Click:Connect(function()
+	toggle3 = not toggle3
+	button3.Text = toggle3 and "Auto Buy Slime Cooldown: ON" or "Auto Buy Slime Cooldown: OFF"
+	while toggle3 do
+		task.wait(0.1)
+		slimevalue:FireServer("slimeValue", "One", nil)
+	end
+end)
+
+local toggle4 = false
+button4.MouseButton1Click:Connect(function()
+	toggle4 = not toggle4
+	button4.Text = toggle4 and "Auto Buy Slime Max Cap: ON" or "Auto Buy Slime Max Cap: OFF"
+	while toggle4 do
+		task.wait(0.1)
+		maxcap:FireServer("maxCap", "One", nil)
+	end
+end)
+
+local toggle5 = false
+button5.MouseButton1Click:Connect(function()
+	toggle5 = not toggle5
+	button5.Text = toggle5 and "Auto Buy Slime Tier: ON" or "Auto Buy Slime Tier: OFF"
+	while toggle5 do
+		task.wait(0.1)
+		slimetier:FireServer("slimeTier", "One", nil)
+	end
+end)
+
+local toggle6 = false
+button6.MouseButton1Click:Connect(function()
+	toggle6 = not toggle6
+	button6.Text = toggle6 and "Auto Buy EXP Multiplier: ON" or "Auto Buy EXP Multiplier: OFF"
+	while toggle6 do
+		task.wait(0.1)
+		expmulti:FireServer("levelMultiplier", "One", nil)
+	end
+end)
