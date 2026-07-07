@@ -8,6 +8,13 @@ for i = 3, 10 do scrollFrame:FindFirstChild("textbox"..i, true):Destroy() end
 local textbox1 = scrollFrame:WaitForChild("textbox1")
 local textbox2 = scrollFrame:WaitForChild("textbox2")
 
+for z = 3, 10 do
+	local buttons = scrollFrame:FindFirstChild("button"..z, true)
+	if buttons then
+		buttons.Parent:Destroy()
+	end
+end
+
 local player = game:GetService("Players").LocalPlayer
 local char = player.Character
 local humanoid = char:WaitForChild("Humanoid")
