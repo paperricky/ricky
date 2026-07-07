@@ -54,7 +54,14 @@ https://paperricky.github.io/paperricky-github-io/
 - Remove Collect Brainrots VFX  
 - Remove Rebirth Notifications
 
-----
+---
+
+
+## 🟢 +1 Speed Keyboard Escape
+- Auto Farm (Stages: 1, 2, 3, 4, 5)
+- TweenService Auto Farm (Stages: 1, 2, 3)
+
+---
 
 ## 🟡 Coming Soon
 
