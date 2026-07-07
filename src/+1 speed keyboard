@@ -1,1 +1,181 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
+task.wait(0.5)
+local gui = game.CoreGui:WaitForChild("PaperGui")
+local mainframe = gui["holds everything"].mainframe
+local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
+local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
+for i = 3, 10 do scrollFrame:FindFirstChild("textbox"..i, true):Destroy() end
+local textbox1 = scrollFrame:WaitForChild("textbox1")
+local textbox2 = scrollFrame:WaitForChild("textbox2")
 
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+local humanoid = char:WaitForChild("Humanoid")
+local hrp = char:WaitForChild("HumanoidRootPart")
+
+local TweenService = game:GetService("TweenService")
+
+button1.Text = "Auto Farm: OFF"
+textbox1.Text = ""
+textbox1.PlaceholderText = "Enter Stage: 1, 2, 3, 4, 5"
+
+button2.Text = "TweenService Auto Farm: OFF"
+textbox2.Text = ""
+textbox2.PlaceholderText = "Enter Stage: 1, 2, 3"
+
+local bridge = Instance.new("Part", workspace)
+bridge.Anchored = true
+bridge.Size = Vector3.new(35, 0.5, 720)
+bridge.Position = Vector3.new(1.5, 75, 1000)
+bridge.Color = Color3.fromRGB(253, 16, 16)
+bridge.Material = Enum.Material.Neon
+
+player.CharacterAdded:Connect(function(character)
+    char = character
+	humanoid = character:WaitForChild("Humanoid")
+    hrp = character:WaitForChild("HumanoidRootPart")
+end)
+
+local function tweento(pos, time)
+    local tween = TweenService:Create(hrp, TweenInfo.new(time), {Position = pos})
+    tween:Play()
+    tween.Completed:Wait()
+end
+
+local function walkto(position)
+    humanoid.WalkSpeed = 100
+    humanoid:MoveTo(position)
+    humanoid.MoveToFinished:Wait()
+end
+
+local function fastwalkto(position)
+    humanoid.WalkSpeed = 250
+    humanoid:MoveTo(position)
+    humanoid.MoveToFinished:Wait()
+end
+
+local toggle = false
+button1.MouseButton1Click:Connect(function()
+    toggle = not toggle
+    button1.Text = toggle and "Auto Farm: ON" or "Auto Farm: OFF"
+    while toggle do
+        task.wait()
+            if textbox1.Text == "1" then
+            humanoid.WalkSpeed = 100
+            humanoid:MoveTo(Vector3.new(2, 9, 280))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(-16, 11, 285))
+            humanoid.MoveToFinished:Wait()
+            task.wait(1)
+
+			elseif textbox1.Text == "2" then
+			humanoid.WalkSpeed = 100
+            humanoid:MoveTo(Vector3.new(2, 9, 280))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(70, 9, 392))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(69, 9, 432))
+            humanoid.MoveToFinished:Wait()
+            local stage2button = workspace.Structure.Stage3.WinBlock2
+            humanoid:MoveTo(stage2button.Position)
+            humanoid.MoveToFinished:Wait()
+            task.wait(1)
+			
+			elseif textbox1.Text == "3" then
+            humanoid.WalkSpeed = 100
+            humanoid:MoveTo(Vector3.new(2, 9, 280))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(70, 9, 392))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(69, 9, 432))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 488))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 562))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(20, 77, 749))
+            humanoid.MoveToFinished:Wait()
+            local stage3button = workspace.Structure.Stage4.WinBlock3
+            humanoid:MoveTo(stage3button.Position)
+            task.wait(1)
+
+            elseif textbox1.Text == "4" then
+            humanoid.WalkSpeed = 100
+            humanoid:MoveTo(Vector3.new(2, 9, 280))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(70, 9, 392))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(69, 9, 432))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 488))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 562))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(20, 77, 749))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(1, 78, 771))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(1, 78, 1089))
+            humanoid.MoveToFinished:Wait()
+            local stage4button = workspace.Structure.Stage5.WinBlock4
+            humanoid:MoveTo(stage4button.Position)
+            task.wait(1)
+
+            elseif textbox1.Text == "5" then
+            humanoid.WalkSpeed = 100
+            humanoid:MoveTo(Vector3.new(2, 9, 280))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(70, 9, 392))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(69, 9, 432))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 488))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(21, 9, 562))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(20, 77, 749))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(1, 78, 771))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(1, 78, 1089))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(1, 77, 1375))
+            humanoid.MoveToFinished:Wait()
+            humanoid:MoveTo(Vector3.new(-16, 80, 1410))
+            task.wait(1)
+        end
+	end
+end)
+
+local dihcramps = false
+button2.MouseButton1Click:Connect(function()
+    dihcramps = not dihcramps
+    button2.Text = dihcramps and "TweenService Auto Farm: ON" or "TweenService Auto Farm: OFF"
+    while dihcramps do
+        task.wait()
+            if textbox2.Text == "1" then
+            tweento(Vector3.new(1, 9, 259), 1)
+            tweento(Vector3.new(-16, 12, 284), 0.6)
+            task.wait(1)
+
+            elseif textbox2.Text == "2" then
+            tweento(Vector3.new(1, 9, 259), 1)
+            tweento(Vector3.new(70, 9, 392), 0.6)
+            tweento(Vector3.new(15, 9, 489), 0.7)
+            local stage2button = workspace.Structure.Stage3.WinBlock2
+            tweento(stage2button.Position + Vector3.new(0, 2, 0), 0.4)
+            task.wait(1)
+
+            elseif textbox2.Text == "3" then
+            tweento(Vector3.new(1, 9, 259), 1)
+            tweento(Vector3.new(70, 9, 392), 0.3)
+            tweento(Vector3.new(15, 9, 489), 0.2)
+            tweento(Vector3.new(23, 9, 534), 0.2)
+            tweento(Vector3.new(60, 79, 660), 0.3)
+            tweento(Vector3.new(22, 78, 750), 0.3)
+            local stage3button = workspace.Structure.Stage4.WinBlock3
+            tweento(stage3button.Position + Vector3.new(0, 2, 0), 0.3)
+            task.wait(1)
+        end
+    end
+end)
