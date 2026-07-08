@@ -1,1 +1,126 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
+task.wait(0.5)
+local gui = game.CoreGui:WaitForChild("PaperGui")
+local mainframe = gui["holds everything"].mainframe
+local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
+local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
 
+
+
+for g = 2, 10 do
+    local textbox = scrollFrame:WaitForChild("textbox" .. g)
+    textbox:Destroy()
+end
+
+local textbox1 = scrollFrame:WaitForChild("textbox1")
+
+button1.Text = "Auto Farm: OFF"
+textbox1.Text = "0.9"
+textbox1.PlaceholderText = "Enter Auto Farm Speed"
+
+button2.Text = "Auto Collect: OFF"
+
+button3.Text = "Auto Rebirth: OFF"
+
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+local hrp = char:WaitForChild("HumanoidRootPart")
+
+local slots = workspace.Plots
+
+player.CharacterAdded:Connect(function(character)
+    char = character
+    hrp = character:WaitForChild("HumanoidRootPart")
+end)
+
+
+local brainrots = workspace.SpawnedBrainrots
+
+
+local toggle = false
+button1.MouseButton1Click:Connect(function()
+    toggle = not toggle
+	button1.Text = toggle and "Auto Farm: ON" or "Auto Farm: OFF"
+    while toggle do
+        task.wait()
+        for _, v in ipairs(brainrots:GetChildren()) do
+            if not toggle then break end
+            if v:GetAttribute("Rarity") == "DIVINE" then
+				task.wait(textbox1.Text)
+                char:MoveTo(v:GetPivot().Position)
+                task.wait(textbox1.Text)
+                fireproximityprompt(v:FindFirstChildWhichIsA("MeshPart").ProximityPrompt)
+                task.wait(textbox1.Text)
+                char:MoveTo(Vector3.new(-101, 12, 170))
+				task.wait(textbox1.Text)
+            end
+        end
+    end
+end)
+
+local toggle1 = false
+button2.MouseButton1Click:Connect(function()
+    toggle1 = not toggle1
+	button2.Text = toggle1 and "Auto Collect: ON" or "Auto Collect: OFF"
+    while toggle1 do
+        for _, v in ipairs(slots:GetChildren()) do
+            if not toggle1 then break end
+            for i = 1, 10 do
+                local slot = v.Slots:FindFirstChild(tostring(i))
+
+                if slot then
+                    firetouchinterest(hrp, slot.Collector.Touch, true)
+                    task.wait()
+                    firetouchinterest(hrp, slot.Collector.Touch, false)
+                end
+            end
+        end
+
+
+        local ricky = workspace:FindFirstChild("BaseExtension1_" .. player.Name)
+        for z = 1, 10 do
+
+        if ricky then
+        local thing = ricky:FindFirstChild("Slots")
+
+        if thing then
+        local slot1 = thing:FindFirstChild(tostring(z))
+
+            if slot1 then
+                firetouchinterest(hrp, slot1.Collector.Touch, true)
+                task.wait()
+                firetouchinterest(hrp, slot1.Collector.Touch, false)
+            end
+        end
+    end
+end
+        local base = workspace:FindFirstChild("BaseExtension2_" .. player.Name)
+
+		if base then
+        for x = 1, 10 do
+           local thingy = base:FindFirstChild("Slots")
+
+           if thingy then
+           local slot2 = thingy:FindFirstChild(tostring(x))
+
+           if slot2 then
+              firetouchinterest(hrp, slot2.Collector.Touch, true)
+              task.wait()
+              firetouchinterest(hrp, slot2.Collector.Touch, false)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+local toggle2 = false
+button3.MouseButton1Click:Connect(function()
+    toggle2 = not toggle2
+    button3.Text = toggle2 and "Auto Rebirth: ON" or "Auto Rebirth: OFF"
+    while toggle2 do
+        task.wait()
+        local Event = game:GetService("ReplicatedStorage").Assets.Remotes:GetChildren()[28]
+        Event:InvokeServer()
+    end
+end)
