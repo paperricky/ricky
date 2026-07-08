@@ -5,12 +5,18 @@ local mainframe = gui["holds everything"].mainframe
 local scrollFrame = mainframe:WaitForChild("Tab2"):WaitForChild("ScrollingFrame")
 local button1,button2,button3,button4,button5,button6,button7,button8,button9,button10 = scrollFrame:FindFirstChild("button1",true),scrollFrame:FindFirstChild("button2",true),scrollFrame:FindFirstChild("button3",true),scrollFrame:FindFirstChild("button4",true),scrollFrame:FindFirstChild("button5",true),scrollFrame:FindFirstChild("button6",true),scrollFrame:FindFirstChild("button7",true),scrollFrame:FindFirstChild("button8",true),scrollFrame:FindFirstChild("button9",true),scrollFrame:FindFirstChild("button10",true)
 
-
-
 for g = 2, 10 do
     local textbox = scrollFrame:WaitForChild("textbox" .. g)
     textbox:Destroy()
 end
+
+button4.Parent:Destroy()
+button5.Parent:Destroy()
+button6.Parent:Destroy()
+button7.Parent:Destroy()
+button8.Parent:Destroy()
+button9.Parent:Destroy()
+button10.Parent:Destroy()
 
 local textbox1 = scrollFrame:WaitForChild("textbox1")
 
