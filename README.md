@@ -63,6 +63,11 @@ https://paperricky.github.io/paperricky-github-io/
 
 ---
 
-## 🟡 Coming Soon
+## 🟡 Hike For Brainrot
+- Auto Farm With Customizable Speed
+- Auto Collect
+- Auto Rebirth
+
+## Coming Soon
 
 - More Brainrot Games 
