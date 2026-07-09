@@ -1,5 +1,5 @@
 
-# made by ultimate tuff paper
+# No, la polizia 🚨👮
 
 ---
 ## Lua:
