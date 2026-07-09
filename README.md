@@ -1,6 +1,6 @@
 
 # No, La Polizia 🚨👮
-
+To Suggest games join https://discord.gg/VahJcnvGbg
 ---
 ## Lua:
 ```lua
