@@ -42,7 +42,8 @@ https://paperricky.github.io/paperricky-github-io/
 ---
 
 ## 🟢 Cross Rivers for Brainrots
-- Auto Farm  
+- Auto Farm
+- Auto Collect
 
 ---
 
