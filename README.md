@@ -1,7 +1,7 @@
 
 # No, La Polizia 🚨👮
-##### To Suggest games join https://discord.gg/VahJcnvGbg
 ---
+#### To Suggest games join https://discord.gg/VahJcnvGbg
 ## Lua:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/paperricky/ricky/refs/heads/main/ricky"))()
